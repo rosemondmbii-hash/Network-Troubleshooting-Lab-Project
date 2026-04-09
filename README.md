@@ -1,3 +1,4 @@
+![Screenshot ipconfig](https://github.com/user-attachments/assets/3f3b2dcf-5e3f-443f-8026-285525da5d78)
 # Network-Troubleshooting-Lab-Project
 Troubleshooting 
 🧾 1. Project Overview
@@ -32,8 +33,12 @@ Confirm DHCP is assigning an IP
 Expected Outcome:
 
 A valid private IP (e.g., 192.168.x.x)
-Presence of a Default Gateway
-Step 2: Test Local Network Connectivity
+Presence of a Default Gateway !
+[Screenshot ipconfig](https://github.com/user-attachments/assets/fcf7b32a-d520-4b4e-bfaf-f566dc645c17)
+
+
+
+Step 2: Test Local Network Connectivity 
 
 Command used:
 
@@ -51,6 +56,11 @@ Interpretation:
 
 Successful reply → Local network is functioning
 Failure → Local connectivity issue
+![Failed local network issue, ping 192 168 1 1](https://github.com/user-attachments/assets/173d0307-efe4-49e0-845d-14ea976fb027)
+
+
+
+
 Step 3: Test Internet Connectivity
 
 Command used:
@@ -65,6 +75,10 @@ Interpretation:
 
 Successful reply → Internet connectivity is available
 Failure → Issue beyond local network (ISP/router)
+![pinging 172 20 1 1 ](https://github.com/user-attachments/assets/b0f1c043-8137-4f03-aaa7-0df411696e40)
+
+
+
 Step 4: Test DNS Resolution
 
 Command used:
@@ -79,6 +93,10 @@ Interpretation:
 
 Successful reply → DNS is working
 Failure (but 8.8.8.8 works) → DNS issue
+![Screenshot ping 8 8 8 8](https://github.com/user-attachments/assets/4aa4f6a3-47ea-4e1d-a704-cb9b63c5087f)
+
+
+
 Step 5: Trace Network Path
 
 Command used:
@@ -95,9 +113,14 @@ Interpretation:
 Early failure → Local or gateway issue
 Mid-path failure → ISP/network issue
 Complete trace → Path is healthy
-📊 5. Results
+![Tracert google com](https://github.com/user-attachments/assets/2ac27338-fac5-4c34-aa88-1d87d95f0d0e)
+![Screenshot tracert 8 8 8 8](https://github.com/user-attachments/assets/25bcfcaa-40ea-4780-9f4f-042ccd29c374)
 
-(Insert your screenshots in your GitHub repo under /screenshots and reference them here)
+
+
+
+
+📊 5. Results
 
 Example:
 ipconfig output showing valid IPv4 and gateway
