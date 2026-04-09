@@ -13,15 +13,17 @@ Verifying IP configuration
 Testing local network communication
 Validating internet connectivity
 Identifying DNS resolution issues
+
 🛠️ 3. Tools & Commands Used
 Windows Command Prompt
 ipconfig
 ping
 tracert
+
 🔬 4. Methodology (Step-by-Step Process)
 
 
-Step 1: Check IP Configuration
+**Step 1: Check IP Configuration**
 
 Command used:
 
@@ -40,7 +42,7 @@ Presence of a Default Gateway !
 
 
 
-Step 2: Test Local Network Connectivity 
+**Step 2: Test Local Network Connectivity **
 
 Command used:
 
