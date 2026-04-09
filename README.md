@@ -14,6 +14,7 @@ Testing local network communication
 Validating internet connectivity
 Identifying DNS resolution issues
 
+
 🛠️ 3. Tools & Commands Used
 Windows Command Prompt
 ipconfig
@@ -38,7 +39,8 @@ Expected Outcome:
 
 A valid private IP (e.g., 192.168.x.x)
 Presence of a Default Gateway !
-[Screenshot ipconfig](https://github.com/user-attachments/assets/fcf7b32a-d520-4b4e-bfaf-f566dc645c17)
+![Screenshot IP Config](https://github.com/user-attachments/assets/88e56a7b-3ca9-4b78-bc6d-fa76a18a626a)
+
 
 
 
