@@ -28,6 +28,8 @@ Identify whether the issue is caused by:
 - `ipconfig /all`
 - `ipconfig /release`
 - `ipconfig /renew`
+- ```markdown
+- `nslookup`
 
 ---
 
@@ -69,10 +71,15 @@ Findings reveals a successful DNS working
 Step 5: Trace Network Path
 Command:
 
-
 tracert google.com
 
 Used to identify where packets drop along the path.
+
+Step 6: DNS Lookup Test
+Command:
+```bash
+nslookup google.com
+
 
 🧠 Troubleshooting Decision Flow
 No IP Address?
