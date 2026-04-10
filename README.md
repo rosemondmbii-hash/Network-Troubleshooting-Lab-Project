@@ -1,165 +1,76 @@
+# Network Troubleshooting Lab Project
 
-# Network-Troubleshooting-Lab-Project
-Troubleshooting 
-🧾 1. Project Overview
+## 📌 Project Overview
+This project demonstrates practical network troubleshooting using Windows command-line tools. The lab simulates a real-world scenario where a user experiences internet connectivity issues, and a structured troubleshooting approach is applied to identify the root cause.
 
-This project demonstrates a structured approach to diagnosing network connectivity issues using core command-line tools. The goal was to identify and isolate network problems across different layers, including local connectivity, internet access, and DNS resolution.
+---
 
-🎯 2. Objective
+## 🎯 Scenario
 
-To troubleshoot and analyze network connectivity by:
+A user reports:
+- Connected to Wi-Fi
+- Unable to access websites
 
-Verifying IP configuration
-Testing local network communication
-Validating internet connectivity
-Identifying DNS resolution issues
+### Objective:
+Identify whether the issue is caused by:
+- DHCP failure
+- Local network issue
+- Internet connectivity problem
+- DNS resolution failure
 
+---
 
-🛠️ 3. Tools & Commands Used
-Windows Command Prompt
+## 🛠️ Tools Used
+
+- `ipconfig`
+- `ping`
+- `tracert`
+- `ipconfig /all`
+- `ipconfig /release`
+- `ipconfig /renew`
+
+---
+
+## 🔍 Troubleshooting Methodology
+
+### Step 1: Check IP Configuration
+Command:
+```bash
 ipconfig
-ping
-tracert
+✅ If IP address is present → DHCP is working
+❌ If no IP → DHCP issue
+![Screenshot IP Config](https://github.com/user-attachments/assets/87b2feb6-65f6-46ad-ae94-b1d922accadb)
+My findings shows that IP address is present meaning DHCP is active and working.
 
-🔬 4. Methodology (Step-by-Step Process)
+Step 2: Test Local Network (Gateway)
+Command:
+ping <default gateway>
 
-
-**Step 1: Check IP Configuration**
-
-Command used:
-
-ipconfig
-
-Purpose:
-
-Verify if the system has a valid IPv4 address
-Confirm DHCP is assigning an IP
-
-Expected Outcome:
-
-A valid private IP (e.g., 192.168.x.x)
-Presence of a Default Gateway !
-![Screenshot IP Config](https://github.com/user-attachments/assets/88e56a7b-3ca9-4b78-bc6d-fa76a18a626a)
-
-
-
-
-**Step 2: Test Local Network Connectivity **
-
-Command used:
-
-ping <default_gateway>
-
-Example:
-
-ping 192.168.1.1
-
-Purpose:
-
-Confirm communication with the local router
-
-Interpretation:
-
-Successful reply → Local network is functioning
-Failure → Local connectivity issue
-![Failed local network issue, ping 192 168 1 1](https://github.com/user-attachments/assets/173d0307-efe4-49e0-845d-14ea976fb027)
-![pinging 172 20 1 1 ](https://github.com/user-attachments/assets/ca046a2d-e801-4be8-be11-69821186bf5c)
-
-
+✅ Success → Local network OK
+❌ Fail → Router / local network issue
+![pinging 172 20 1 1 ](https://github.com/user-attachments/assets/4008f51f-89d5-4fee-ae10-58ee0ebf3647)
+![IP Config all](https://github.com/user-attachments/assets/899a9ded-e81e-4e28-9df2-52c278ea4c97)
+![Failed local network issue, ping 192 168 1 1](https://github.com/user-attachments/assets/3fe7fbb4-acad-4d0c-9404-e2d2b61adb04)
+Based on the findings from the above image, connection to the local network with the gateway address of 192.168.1.1 reveals a failed router connection on the local network and the other image reveals a successful router connection to the local network.
 
 Step 3: Test Internet Connectivity
-
-Command used:
+Command:
 
 ping 8.8.8.8
 
-Purpose:
-
-Check if the device can reach the internet
-
-Interpretation:
-
-Successful reply → Internet connectivity is available
-Failure → Issue beyond local network (ISP/router)
-![Screenshot ping 8 8 8 8](https://github.com/user-attachments/assets/1c1c6b0d-2a79-4b34-8b01-5569fe424a4e)
-
-
+✅ Success → Internet is reachable
+❌ Fail → ISP / external connectivity issue
+![Screenshot ping 8 8 8 8](https://github.com/user-attachments/assets/942f7103-0744-4212-8667-ac2220af2ff5)
+Findings reveals the internet is reachable to the ISP
 
 Step 4: Test DNS Resolution
-
-Command used:
+Command:
 
 ping google.com
 
-Purpose:
-
-Verify domain name resolution
-
-Interpretation:
-
-Successful reply → DNS is working
-Failure (but 8.8.8.8 works) → DNS issue
-![pinging google com](https://github.com/user-attachments/assets/d98e1a3a-eccf-490e-9956-966988fd17a6)
+✅ Success → DNS working
+❌ Fail (but 8.8.8.8 works) → DNS issue
+![pinging google com](https://github.com/user-attachments/assets/7573e382-1bf1-488a-84ad-ecd39b243550)
+Findings reveals a successful DNS working
 
 
-
-Step 5: Trace Network Path
-
-Command used:
-
-tracert 8.8.8.8
-
-Purpose:
-
-Identify the path packets take to reach the destination
-Detect where delays or failures occur
-
-Interpretation:
-
-Early failure → Local or gateway issue
-Mid-path failure → ISP/network issue
-Complete trace → Path is healthy
-![Tracert google com](https://github.com/user-attachments/assets/2ac27338-fac5-4c34-aa88-1d87d95f0d0e)
-![Screenshot tracert 8 8 8 8](https://github.com/user-attachments/assets/25bcfcaa-40ea-4780-9f4f-042ccd29c374)
-
-
-
-
-📊 5. Results
-
-Example:
-ipconfig output showing valid IPv4 and gateway
-Successful ping to gateway
-Successful ping to 8.8.8.8
-DNS resolution results
-Tracert showing network hops
-
-other command lines learned
-
-IP Config all 
-shows more details of the network ( MAC Address, the different ethernet adapters, DHCP)
-![IP Config all](https://github.com/user-attachments/assets/6b460ebb-f258-4541-b547-dd1101f15cf3)
-![IP Config all](https://github.com/user-attachments/assets/8c9b82c4-fb70-4913-8ce3-19c332fa3cfa)
-
-IP Config /renew
-![IP Config -renew](https://github.com/user-attachments/assets/6a482d45-dac0-4bd6-b1a6-3021b3e1e8c5)
-
-IP Config /release
-![IP Config -release](https://github.com/user-attachments/assets/c5c30fee-057f-4ce9-a565-1ad08ede3f95)
-
-
-🧠 6. Analysis
-
-The troubleshooting process followed a layered approach:
-
-A valid IPv4 address confirmed DHCP functionality
-Successful ping to the default gateway verified local network connectivity
-Successful ping to a public IP confirmed internet access
-DNS testing helped determine whether name resolution was functioning correctly
-Tracert analysis provided visibility into the network path and potential latency points
-
-This structured method allowed for efficient isolation of issues at different layers of the network.
-
-✅ 7. Conclusion
-
-This project demonstrates a systematic approach to diagnosing network issues using fundamental networking tools. By following a logical sequence—IP configuration, local connectivity, internet reachability, and DNS resolution—it is possible to quickly identify and isolate the root cause of most network problems.
