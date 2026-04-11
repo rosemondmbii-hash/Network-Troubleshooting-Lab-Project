@@ -41,38 +41,30 @@ Command:
 ipconfig
 ✅ If IP address is present → DHCP is working
 ❌ If no IP → DHCP issue
-My findings shows that IP address is present meaning DHCP is active and working.
 
 Step 2: Test Local Network Gateway
 Command:
-ping <default gateway>
+ping default gateway
 ✅ Success → Local network OK
 ❌ Fail → Router / local network issue
-Based on the findings from the above image, connection to the local network with the gateway address of 192.168.1.1 reveals a failed router connection on the local network and the other image reveals a successful router connection to the local network.
+
 
 Step 3: Test Internet Connectivity
 Command:
-
 ping 8.8.8.8
-
 ✅ Success → Internet is reachable
 ❌ Fail → ISP / external connectivity issue
-Findings reveals the internet is reachable to the ISP
+
 
 Step 4: Test DNS Resolution
 Command:
-
 ping google.com
-
 ✅ Success → DNS working
 ❌ Fail (but 8.8.8.8 works) → DNS issue
-Findings reveals a successful DNS working
 
 Step 5: Trace Network Path
 Command:
-
 tracert google.com
-
 Used to identify where packets drop along the path.
 
 Step 6: DNS Lookup Test
@@ -118,6 +110,7 @@ Flushed DNS cache (if applicable)
 
 Escalated if issue persists
 
+
 💼 Real-World Application
 
 This troubleshooting approach is used by:
@@ -138,6 +131,7 @@ Improve customer experience
 
 Provide accurate escalation details
 
+
 🚀 Skills Demonstrated
 
 Network troubleshooting
@@ -154,5 +148,5 @@ Root cause analysis
 
 Technical documentation
 
-[pinging google com](https://github.com/user-attachments/assets/922ab094-881a-45e1-af6e-98f7f113f5cb)
+
 
