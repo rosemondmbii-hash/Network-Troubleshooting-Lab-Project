@@ -43,7 +43,7 @@ ipconfig
 ❌ If no IP → DHCP issue
 My findings shows that IP address is present meaning DHCP is active and working.
 
-Step 2: Test Local Network (Gateway)
+Step 2: Test Local Network Gateway
 Command:
 ping <default gateway>
 ✅ Success → Local network OK
