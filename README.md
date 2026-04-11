@@ -153,15 +153,26 @@ SOC Analysts (initial triage)
 It helps:
 
 Quickly isolate issues
+
 Reduce resolution time
+
 Improve customer experience
+
 Provide accurate escalation details
+
 🚀 Skills Demonstrated
+
 Network troubleshooting
 TCP/IP fundamentals
+
 DNS analysis
+
 Connectivity testing
+
 Command-line diagnostics
+
 Root cause analysis
+
 Technical documentation
 
+![pinging google com](https://github.com/user-attachments/assets/eb9cdde7-3b9a-484d-9eaa-768b32960a57)
