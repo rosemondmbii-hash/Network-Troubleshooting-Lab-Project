@@ -92,37 +92,7 @@ Can’t Ping 8.8.8.8?
    → Internet Issue
 
 Can Ping 8.8.8.8 but NOT google.com?
-   → DNS Issue
-
-📸 Evidence (Screenshots)
-IP Configuration
-
-➡️ Confirms valid IPv4 address assigned
-![Screenshot IP Config](https://github.com/user-attachments/assets/40e4a55d-e732-49a5-9764-536bcfc85d76)
-
-Ping Gateway
-![pinging 172 20 1 1 ](https://github.com/user-attachments/assets/196d3374-fb33-48a2-af78-57f239e5c938)
-
-
-➡️ Successful reply confirms local network connectivity
-
-Ping Internet (8.8.8.8)
-![Screenshot ping 8 8 8 8](https://github.com/user-attachments/assets/382fde51-fdcb-4e56-9483-4f124dd5d639)
-
-
-➡️ Confirms external internet access
-
-Ping Domain (google.com)
-![pinging google com](https://github.com/user-attachments/assets/d2f68eb3-b3e4-4833-b43e-3c30625b0dbe)
-
-➡️ Used to validate DNS resolution
-
-Traceroute
-
-➡️ Shows path packets take across network
-![Tracert google com](https://github.com/user-attachments/assets/451de021-15c9-4744-bbcc-a52c86b820f6)
-![Screenshot tracert 8 8 8 8](https://github.com/user-attachments/assets/ae55bb99-4667-4a12-abbd-c2a68fe4d308)
-
+   → DNS Issue)
 
 
 📄 Sample Ticket Documentation
@@ -131,8 +101,11 @@ Issue: User unable to access websites
 Findings:
 
 IP address assigned successfully
+
 Gateway reachable
+
 Internet reachable (8.8.8.8 successful)
+
 Domain resolution failed
 
 Root Cause: DNS resolution issue
@@ -140,14 +113,19 @@ Root Cause: DNS resolution issue
 Action Taken:
 
 Verified DNS settings
+
 Flushed DNS cache (if applicable)
+
 Escalated if issue persists
+
 💼 Real-World Application
 
 This troubleshooting approach is used by:
 
 Help Desk Technicians
+
 Network Support Engineers
+
 SOC Analysts (initial triage)
 
 It helps:
@@ -163,6 +141,7 @@ Provide accurate escalation details
 🚀 Skills Demonstrated
 
 Network troubleshooting
+
 TCP/IP fundamentals
 
 DNS analysis
@@ -175,4 +154,5 @@ Root cause analysis
 
 Technical documentation
 
-![pinging google com](https://github.com/user-attachments/assets/eb9cdde7-3b9a-484d-9eaa-768b32960a57)
+[pinging google com](https://github.com/user-attachments/assets/922ab094-881a-45e1-af6e-98f7f113f5cb)
+
